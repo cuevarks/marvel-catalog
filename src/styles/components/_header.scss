@@ -1,0 +1,26 @@
+@import "../abstracts/_variables.scss";
+
+.header-logo {
+  img {
+    height: 3rem;
+    margin: 20px;
+  }
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__items {
+  cursor: pointer;
+  display: flex;
+
+  .menu__item {
+    font-weight: bolder;
+    margin: 1rem;
+
+    &:hover {
+      background-color: $marvel-red;
+    }
+  }
+}
