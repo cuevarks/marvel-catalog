@@ -1,0 +1,27 @@
+.search {
+  background-color: $marvel-white;
+  border-radius: $standard-border-radius;
+  display: flex;
+  height: 3rem;
+  margin-left: 25%;
+  width: 50%;
+}
+
+.search-icon {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+
+  button {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.search-input {
+  width: 93%;
+
+  input {
+    padding-left: 2rem;
+  }
+}

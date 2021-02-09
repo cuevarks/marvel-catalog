@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./img/logo.svg";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import "../../styles/components/_header.scss";
 
 const Header = () => {
   return (

@@ -1,11 +1,16 @@
 @import "../abstracts/_variables.scss";
 
+.header.MuiAppBar-positionFixed {
+  position: inherit;
+}
+
 .header-logo {
   img {
     height: 3rem;
     margin: 20px;
   }
 }
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -14,10 +19,12 @@
 .menu__items {
   cursor: pointer;
   display: flex;
+  height: 5.6rem;
 
   .menu__item {
+    align-self: center;
     font-weight: bolder;
-    margin: 1rem;
+    padding: 1.8rem 1rem;
 
     &:hover {
       background-color: $marvel-red;

@@ -1,6 +1,7 @@
 import React from "react";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { Container, createMuiTheme, ThemeProvider } from "@material-ui/core";
 import Header from "./components/Header/Header.js";
+import Characters from "./containers/Characters/Characters";
 
 const theme = createMuiTheme({
   palette: {
@@ -15,11 +16,14 @@ const theme = createMuiTheme({
 
 const App = () => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Header />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <Container className="layout">
+        <Header className="header" />
+        <main className="main-container">
+          <Characters />
+        </main>
+      </Container>
+    </ThemeProvider>
   );
 };
 
