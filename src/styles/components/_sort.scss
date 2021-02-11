@@ -1,3 +1,9 @@
-.sort-icon {
-  color: $marvel-white;
+.sort-button.MuiButton-root {
+  background-color: $marvel-white;
+  border-radius: $standard-border-radius;
+  color: $primary-gray;
+
+  &:hover {
+    background-color: darken($marvel-white, 25);
+  }
 }

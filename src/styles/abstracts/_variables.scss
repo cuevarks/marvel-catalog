@@ -1,6 +1,13 @@
-$background-main: url("assets/background.jpg");
+$background-main: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),
+  url("/assets/img/background5.jpg");
+$loading-gif: url("/assets/img/loading.gif");
 $standard-border-radius: 25px;
 $card-box-shadow: 0 10px 10px 0 rgb(26, 27, 27);
 $marvel-red: #ed1d24;
-$marvel-red-transparent: #ed1d24a1;
+$marvel-red-transparent: #ed1d24e8;
 $marvel-white: #fefefe;
+$primary-gray: #2d2d2d;
+$primary-dark: #1c1c1c;

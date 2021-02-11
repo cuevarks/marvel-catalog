@@ -1,6 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "./img/logo.svg";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Toolbar } from "@material-ui/core";
 
 const Header = () => {
   return (
@@ -10,15 +11,18 @@ const Header = () => {
           <img alt="logo" className="" loading="lazy" src={logo} />
         </figure>
         <nav className="menu__items">
-          <Typography className="menu__item" variant="h6">
+          <NavLink className="menu__item" exact to="/">
             Characters
-          </Typography>
-          <Typography className="menu__item" variant="h6">
+          </NavLink>
+          <NavLink className="menu__item" to="/comics">
             Comics
-          </Typography>
-          <Typography className="menu__item" variant="h6">
+          </NavLink>
+          <NavLink className="menu__item" to="/stories">
             Stories
-          </Typography>
+          </NavLink>
+          <NavLink className="menu__item" to="/bookmarks">
+            Bookmarks
+          </NavLink>
         </nav>
       </Toolbar>
     </AppBar>

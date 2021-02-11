@@ -10,7 +10,7 @@ const Card = ({ characterName, thumbnail }) => {
           <Button className="card-button">Comics</Button>
           <Button className="card-button">Stories</Button>
         </div>
-        <img src={thumbnail} />
+        <img loading="lazy" src={thumbnail} />
         <figcaption className="card-caption">{characterName}</figcaption>
       </figure>
     </CardUI>

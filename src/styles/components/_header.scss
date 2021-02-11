@@ -1,5 +1,3 @@
-@import "../abstracts/_variables.scss";
-
 .header.MuiAppBar-positionFixed {
   position: inherit;
 }
@@ -23,8 +21,17 @@
 
   .menu__item {
     align-self: center;
-    font-weight: bolder;
+    all: unset;
+    color: $marvel-white;
+    font-size: 30px;
+    font-stretch: 50%;
+    font-weight: 700;
     padding: 1.8rem 1rem;
+
+    &.active {
+      background-color: $marvel-red;
+      color: $primary-dark;
+    }
 
     &:hover {
       background-color: $marvel-red;
