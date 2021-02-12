@@ -8,7 +8,7 @@ const Bookmark = () => {
   return (
     <section className="related-gallery bookmarks">
       <fragment className="related-gallery__container">
-        {bookmarks.length ? (
+        {bookmarks && bookmarks.length ? (
           bookmarks.map((bookmark, index) => (
             <Card key={`bookmark-${index}`}>
               <figure>
