@@ -6,10 +6,17 @@ import {
   getLocalStorageData,
   removeLocalStorageData,
 } from "../../utils/constants/helpers";
-
+const bookmarkedItem = (bookmarks, title) => {
+  let isBookmarked = false;
+  if (bookmarks) {
+    isBookmarked = bookmarks.find((element) => element.title === title);
+    return isBookmarked;
+  }
+  return isBookmarked;
+};
 const Card = ({ id, thumbnail, title, type }) => {
   const bookmarks = getLocalStorageData("saved-items");
-  const isBookmarked = bookmarks.find((element) => element.title === title);
+  const isBookmarked = bookmarkedItem(bookmarks, title);
   const [bookmark, setBookmark] = useState(!isBookmarked);
   const handleBookmark = () => {
     setBookmark(!bookmark);
