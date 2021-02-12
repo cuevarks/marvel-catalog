@@ -2,6 +2,7 @@
   background-color: $marvel-white;
   border-radius: $standard-border-radius;
   color: $primary-gray;
+  height: 3rem;
 
   &:hover {
     background-color: darken($marvel-white, 25);

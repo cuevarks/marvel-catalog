@@ -2,9 +2,9 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <figure className="loading-container">
-      <img alt="Loading" className="loading-img" src="loading.gif"></img>
-    </figure>
+    <video className="loading-container" autoPlay loop muted playsInline>
+      <source src="loading.webm" type="video/webm" />
+    </video>
   );
 };
 

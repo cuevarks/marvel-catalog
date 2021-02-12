@@ -1,13 +1,16 @@
 @import "./base/_reset.scss";
 @import "./abstracts/_variables.scss";
-@import "./components/_characters.scss";
+@import "./components/_gallery.scss";
 @import "./components/_container.scss";
 @import "./components/_card.scss";
 @import "./components/_header.scss";
 @import "./components/_search.scss";
-@import "./components/_option-bar.scss";
+@import "./components/_action-bar.scss";
 @import "./components/_sort.scss";
 @import "./components/_loading.scss";
+@import "./components/_details.scss";
+@import "./components/_related-gallery.scss";
+@import "./components/_stories.scss";
 
 body {
   background-image: $background-main;

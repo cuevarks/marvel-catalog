@@ -23,9 +23,8 @@
     align-self: center;
     all: unset;
     color: $marvel-white;
-    font-size: 30px;
-    font-stretch: 50%;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: bold;
     padding: 1.8rem 1rem;
 
     &.active {
@@ -36,5 +35,18 @@
     &:hover {
       background-color: $marvel-red;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu__icon,
+.mobile-menu__container {
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
   }
 }

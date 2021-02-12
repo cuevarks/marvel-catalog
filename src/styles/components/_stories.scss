@@ -1,0 +1,5 @@
+.stories-gallery {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  }
+}

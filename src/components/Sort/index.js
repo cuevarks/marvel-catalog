@@ -1,19 +1,28 @@
 import React, { useContext, useState } from "react";
 import { Button, Icon } from "@material-ui/core";
 import GlobalContext from "../../contexts/GlobalContext";
+import SortByAlpha from "@material-ui/icons/SortByAlpha";
+import FormatListNumbered from "@material-ui/icons/FormatListNumbered";
 
 const Sort = () => {
-  const [alphOrder, setAlphOrder] = useState(true);
-  const { dispatches } = useContext(GlobalContext);
+  const [currentOrder, setCurrentOrder] = useState("inverse");
+  const {
+    dispatches,
+    state: { type },
+  } = useContext(GlobalContext);
 
   const handleSort = () => {
-    setAlphOrder(!alphOrder);
-    dispatches.sortCharacters(alphOrder);
+    setCurrentOrder(currentOrder === "standard" ? "inverse" : "standard");
+    dispatches.sortItems(currentOrder);
   };
 
   return (
     <Button className="sort-button" onClick={handleSort}>
-      <Icon className="sort-icon">sort_by_alpha</Icon>
+      {type === "characters" ? (
+        <SortByAlpha className="sort-icon" />
+      ) : (
+        <FormatListNumbered className="sort-icon" />
+      )}
     </Button>
   );
 };

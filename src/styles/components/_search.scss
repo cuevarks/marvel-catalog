@@ -3,8 +3,8 @@
   border-radius: $standard-border-radius;
   display: flex;
   height: 3rem;
-  margin-left: 25%;
-  width: 50%;
+  margin-right: 2rem;
+  width: 30rem;
 }
 
 .search-icon {
@@ -15,6 +15,11 @@
   button {
     height: 100%;
     width: 100%;
+
+    &:hover {
+      background-color: lighten($primary-dark, 70);
+      border-radius: $standard-border-radius;
+    }
   }
 }
 
@@ -24,4 +29,47 @@
   input {
     padding-left: 2rem;
   }
+}
+
+.select,
+.format-select {
+  padding: 15px;
+
+  &.MuiInputBase-root {
+    cursor: pointer;
+  }
+
+  .MuiInputBase-input {
+    all: unset;
+    border-radius: $standard-border-radius;
+    width: 100%;
+  }
+
+  &:hover {
+    border-radius: $standard-border-radius;
+    background-color: lighten($primary-dark, 70);
+  }
+}
+
+.MuiInput-underline,
+.format-select {
+  &.select::before,
+  &.format-select::before {
+    border-bottom: unset;
+    content: "";
+    transition: none;
+    all: unset;
+  }
+
+  &.select::after,
+  &.format-select::after {
+    border-bottom: unset;
+    content: "";
+    transition: none;
+    all: unset;
+  }
+}
+
+.format-select {
+  width: 100%;
 }
