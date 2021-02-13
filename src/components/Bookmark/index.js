@@ -7,7 +7,11 @@ const Bookmark = () => {
 
   return (
     <section className="related-gallery bookmarks">
-      <fragment className="related-gallery__container">
+      <fragment
+        className={`related-gallery__container ${
+          bookmarks && bookmarks.length ? "" : "not-found"
+        }`}
+      >
         {bookmarks && bookmarks.length ? (
           bookmarks.map((bookmark, index) => (
             <Card key={`bookmark-${index}`}>
@@ -20,7 +24,9 @@ const Bookmark = () => {
             </Card>
           ))
         ) : (
-          <h1>You don&apos;t have any saved bookmarks</h1>
+          <h1 className="not-found-bookmark">
+            You don&apos;t have any saved bookmarks
+          </h1>
         )}
       </fragment>
     </section>

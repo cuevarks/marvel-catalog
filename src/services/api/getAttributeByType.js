@@ -9,7 +9,7 @@ export const getAttributeByType = async (attribute, id, type) => {
   try {
     const {
       data: {
-        data: { results },
+        data: { count, results },
       },
     } = await get(request, {
       headers: {
@@ -17,7 +17,8 @@ export const getAttributeByType = async (attribute, id, type) => {
         Accept: "application/json",
       },
     });
-    return results;
+
+    return { results, count };
   } catch (e) {
     return [];
   }

@@ -19,7 +19,8 @@ const Search = () => {
   };
 
   const handleSearch = () => {
-    dispatches.searchItems(filterBy, searchTerm);
+    const filterParam = isCharacter(type) ? "name" : filterBy;
+    dispatches.searchItems(filterParam, searchTerm);
   };
 
   const handleSelect = (event) => {
@@ -28,12 +29,17 @@ const Search = () => {
     setFilterBy(filterBy);
   };
 
+  const handleEnter = (e) => {
+    e.key === "Enter" && searchTerm && handleSearch();
+  };
+
   return (
     <section className="search">
       {filterBy !== "format" && (
         <InputBase
           className="search-input"
           onChange={handleSearchInput}
+          onKeyDown={handleEnter}
           placeholder="Search..."
           value={searchTerm}
         />
@@ -63,7 +69,7 @@ const Search = () => {
         </Select>
       )}
       <div className="search-icon">
-        <Button onClick={handleSearch}>
+        <Button onClick={handleSearch} disabled={!searchTerm} type="submit">
           <SearchIcon />
         </Button>
       </div>

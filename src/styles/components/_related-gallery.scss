@@ -1,7 +1,9 @@
 .related-gallery {
+  align-items: center;
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
+  width: 100%;
 
   figure {
     align-items: center;
@@ -20,6 +22,15 @@
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
   gap: 3rem;
   padding: 1rem 5rem;
+  width: 100%;
+
+  .MuiPaper-root {
+    background-color: $marvel-red-transparent;
+  }
+
+  &.not-found {
+    grid-template-columns: auto;
+  }
 
   div {
     display: flex;
@@ -38,11 +49,11 @@
   font-size: 4rem;
   font-weight: bold;
   padding: 2rem;
+  width: min-content;
 }
 
 .related-gallery__caption {
   align-items: center;
-  background-color: $marvel-red-transparent;
   bottom: 0;
   display: flex;
   font-size: 25px;
@@ -66,4 +77,18 @@
     padding-top: 2rem;
     width: min-content;
   }
+}
+
+.bookmarks .not-found {
+  width: auto;
+}
+
+.not-found-bookmark {
+  background: #fefefe;
+  border-radius: 25px;
+  box-shadow: $card-box-shadow;
+  color: $card-mask;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 5rem;
 }

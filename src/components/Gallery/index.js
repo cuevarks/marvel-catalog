@@ -8,7 +8,9 @@ const Gallery = ({ type }) => {
   const { state } = useContext(GlobalContext);
   return (
     <section className={`gallery ${type}-gallery`}>
-      <div className="gallery-container">
+      <div
+        className={`gallery-container ${state[type].length ? "" : "loading"} `}
+      >
         {state[type].length ? (
           state[type].map((item, index) => (
             <Card

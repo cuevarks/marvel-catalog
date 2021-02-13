@@ -9,7 +9,7 @@ export const getGalleryList = async (type) => {
   try {
     const {
       data: {
-        data: { results },
+        data: { count, results },
       },
     } = await get(request, {
       headers: {

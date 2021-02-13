@@ -9,16 +9,22 @@
 
 .search-icon {
   align-items: center;
-  cursor: pointer;
   display: flex;
 
   button {
     height: 100%;
     width: 100%;
 
-    &:hover {
-      background-color: lighten($primary-dark, 70);
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &.MuiButtonBase-root.MuiButton-root.MuiButton-text {
       border-radius: $standard-border-radius;
+    }
+
+    &.MuiButtonBase-root.MuiButton-root.MuiButton-text:hover {
+      background-color: lighten($primary-dark, 70);
     }
   }
 }

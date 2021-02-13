@@ -4,6 +4,14 @@
   width: 60%;
 }
 
+.gallery-container.loading {
+  grid-template-columns: auto;
+  justify-items: center;
+
+  .loading-container {
+    width: 20%;
+  }
+}
 .loading-vid {
   margin-left: 55rem;
   width: 10rem;

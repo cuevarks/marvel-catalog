@@ -14,7 +14,7 @@ export const searchItems = async (filterBy, term, type) => {
   try {
     const {
       data: {
-        data: { results },
+        data: { count, results },
       },
     } = await get(characterRequest, {
       headers: {
