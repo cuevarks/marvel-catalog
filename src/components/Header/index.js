@@ -20,9 +20,11 @@ const Header = () => {
   return (
     <AppBar className="header">
       <Toolbar className="menu">
-        <figure className="header-logo">
-          <img alt="logo" className="" loading="lazy" src={logo} />
-        </figure>
+        <NavLink exact to="/characters">
+          <figure className="header-logo">
+            <img alt="logo" className="" loading="lazy" src={logo} />
+          </figure>
+        </NavLink>
         <nav className="menu__items">
           {NAV_ELEMENTS.map((element, index) => (
             <NavLink
