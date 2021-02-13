@@ -29,31 +29,47 @@ const Card = ({ id, thumbnail, title, type }) => {
     <CardUI className="card-container">
       <figure>
         <div className="card-buttons">
-          <Button className="bookmark-button" onClick={handleBookmark}>
+          <Button
+            aria-label="Bookmark"
+            className="bookmark-button"
+            onClick={handleBookmark}
+          >
             {bookmark ? "Bookmark" : "Remove"}
           </Button>
           {type === "characters" ? (
             <span>
               <Link to={`/${type}/details/${id}`}>
-                <Button className="card-button">Details</Button>
+                <Button aria-label="Details" className="card-button">
+                  Details
+                </Button>
               </Link>
               <Link to={`/${type}/${id}/comics`}>
-                <Button className="card-button">Comics</Button>
+                <Button aria-label="Comics" className="card-button">
+                  Comics
+                </Button>
               </Link>
               <Link to={`/${type}/${id}/stories`}>
-                <Button className="card-button">Stories</Button>
+                <Button aria-label="Stories" className="card-button">
+                  Stories
+                </Button>
               </Link>
             </span>
           ) : type === "comics" ? (
             <span>
               <Link to={`/${type}/details/${id}`}>
-                <Button className="card-button">Details</Button>
+                <Button aria-label="Details" className="card-button">
+                  Details
+                </Button>
               </Link>
               <Link to={`/${type}/${id}/characters`}>
-                <Button className="card-button">Characters</Button>
+                <Button aria-label="Characters" className="card-button">
+                  Characters
+                </Button>
               </Link>
               <Link to={`/${type}/${id}/stories`}>
-                <Button className="card-button">Stories</Button>
+                <Button aria-label="Stories" className="card-button">
+                  Stories
+                </Button>
               </Link>
             </span>
           ) : (
@@ -67,7 +83,7 @@ const Card = ({ id, thumbnail, title, type }) => {
             </span>
           )}
         </div>
-        <img loading="lazy" src={thumbnail} />
+        <img alt={`${type} title ${title}`} loading="lazy" src={thumbnail} />
         <figcaption className="card-caption">{title}</figcaption>
       </figure>
     </CardUI>

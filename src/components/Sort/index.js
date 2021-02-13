@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Button, Icon } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import GlobalContext from "../../contexts/GlobalContext";
 import SortByAlpha from "@material-ui/icons/SortByAlpha";
 import FormatListNumbered from "@material-ui/icons/FormatListNumbered";
@@ -17,7 +17,11 @@ const Sort = () => {
   };
 
   return (
-    <Button className="sort-button" onClick={handleSort}>
+    <Button
+      aria-label="Sort items"
+      className="sort-button"
+      onClick={handleSort}
+    >
       {type === "characters" ? (
         <SortByAlpha className="sort-icon" />
       ) : (

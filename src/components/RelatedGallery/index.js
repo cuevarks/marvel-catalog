@@ -31,6 +31,7 @@ const RelatedGallery = () => {
               <Card key={`${type}-${index}`}>
                 <figure>
                   <img
+                    alt={item[getTitle(attribute)]}
                     loading="lazy"
                     src={
                       item.thumbnail

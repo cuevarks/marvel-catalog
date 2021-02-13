@@ -24,6 +24,7 @@ const Details = () => {
             <Paper key={`${type}-${id}`} className="details-card">
               <figure>
                 <img
+                  alt={detail[`${type === "characters" ? "name" : "title"}`]}
                   loading="lazy"
                   src={`${detail.thumbnail.path}/portrait_uncanny.${detail.thumbnail.extension}`}
                 />

@@ -16,7 +16,11 @@ const Bookmark = () => {
           bookmarks.map((bookmark, index) => (
             <Card key={`bookmark-${index}`}>
               <figure>
-                <img loading="lazy" src={bookmark.thumbnail} />
+                <img
+                  alt={`Bookmarked item titled ${bookmark.title}`}
+                  loading="lazy"
+                  src={bookmark.thumbnail}
+                />
                 <figcaption className="related-gallery__caption">
                   {bookmark.title}
                 </figcaption>

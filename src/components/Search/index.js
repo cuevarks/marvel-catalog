@@ -69,7 +69,12 @@ const Search = () => {
         </Select>
       )}
       <div className="search-icon">
-        <Button onClick={handleSearch} disabled={!searchTerm} type="submit">
+        <Button
+          aria-label="search"
+          onClick={handleSearch}
+          disabled={!searchTerm}
+          type="submit"
+        >
           <SearchIcon />
         </Button>
       </div>
